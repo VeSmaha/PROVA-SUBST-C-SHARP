@@ -1,7 +1,12 @@
+using Api.Db;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<Context>(
+    options=>options.UseSqlite("Data Source=Veronica.db;cache=shared")
+);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -17,6 +22,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(
+    x=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+);
 
 app.UseAuthorization();
 

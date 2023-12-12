@@ -1,0 +1,23 @@
+### Get
+GET http://localhost:5066/api/imc/listar
+
+### Post
+POST http://localhost:5066/api/imc/cadastrar
+Content-Type: application/json
+
+{
+    "Altura":1.85,
+    "Peso": 25.5,
+    "usuarioId": 2
+}
+
+### Post
+PUT http://localhost:5066/api/imc/alterar/1
+Content-Type: application/json
+
+{
+    "Altura":1.60,
+    "Peso": 60,
+    "usuarioId": 3
+}
+

@@ -1,0 +1,27 @@
+<h1>Imcs</h1>
+<table>
+    <tr>
+        <th>Id Usuario</th>
+        <th>Nome</th>
+        <th>Data Nascimento</th>
+        <th>Altura</th>
+        <th>Peso</th>
+        <th>Imc</th>
+        <th>Classificação</th>
+        <th>Criado Em</th>
+        <th>Alterar</th>
+    </tr>
+    <tr *ngFor="let i of Imcs">
+        <td>{{i.usuarioId}}</td>
+        <td>{{i.usuario?.nome}}</td>
+        <td>{{i.usuario?.dataNasc}}</td>
+        <td>{{i.altura}}</td>
+        <td>{{i.peso}}</td>
+        <td>{{i.imcTotal}}</td>
+        <td>{{i.classificacao}}</td>
+        <td>{{i.criadoEm}}</td>
+        <td>
+            
+        </td>
+    </tr>
+</table>

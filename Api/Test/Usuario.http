@@ -1,0 +1,11 @@
+### Get
+GET http://localhost:5066/api/usuario/listar
+
+### Post
+POST http://localhost:5066/api/usuario/cadastrar
+Content-Type: application/json
+
+{
+    "Nome":"Usuario 3",
+    "DataNascimento": "14/08/2000"
+}

@@ -1,0 +1,21 @@
+<div>
+    <div>
+        <label for="">Altura</label>
+        <input type="text" [(ngModel)]="altura">
+
+        <label for="">Peso</label>
+        <input type="text" [(ngModel)]="peso">
+
+        <p>Usuario</p>
+        <select [(ngModel)]="usuarioId">
+            <option *ngFor="let u of usuarios"
+            [value]="u.usuarioId">
+        {{u.nome}}
+        </option>
+        </select>
+
+        <button (click)="cadastrar()">
+            cadastrar
+        </button>
+    </div>
+</div>
